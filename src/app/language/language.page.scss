@@ -1,0 +1,33 @@
+ion-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    margin:180px 50px 180px;
+    height:50%;
+    display: flex;
+    border-radius: 20px;
+    background:black
+
+}
+.logo{
+    background-color:black;
+    padding:20px;
+}
+.logo img{
+    max-width: 300px;
+}
+.button{
+    margin: 10px 10px 10px;
+    text-align: center;
+    height: 75px;
+    font-size: 30px;
+    border-radius: 10px;
+
+    background:white;
+}
+.topmargin{
+    margin-top: 70px;
+}
