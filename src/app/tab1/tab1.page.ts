@@ -40,28 +40,29 @@ export class Tab1Page implements OnInit {
 
   ngOnInit() {
     this.getCategories();
-    console.log("currLang", this.currLang);
+  }
+  getLanguage() {
+    console.log("1 - getting lang");
+    return new Promise((res, rej) => {
+      this.currLang = this.turkish.selectedLang;
+      res(this.currLang);
+    });
   }
 
   getCategories() {
     this.presentLoading("מעדכן תפריט")
       .then(async () => {
-        await this.turkish.getMenu().subscribe(d => {
-          console.log("getting ctegories");
-          console.log(d);
-          this.categories = d;
+        await this.getLanguage().then(s => {
+          console.log("currLang: ", s);
+          this.turkish.getMenu().subscribe(d => {
+            console.log("2 - getting ctegories");
+            console.log(d);
+            this.categories = d;
+          });
         });
       })
       .then(() => {
-        console.log("setting lang");
-        this.turkish.lang.subscribe(lng => {
-          console.log("lng", lng);
-
-          this.currLang = lng;
-        });
-      })
-      .then(() => {
-        console.log("dismissing");
+        console.log("3 - dismissing");
         this.loading.dismiss();
       });
   }

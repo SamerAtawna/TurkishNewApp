@@ -29,7 +29,6 @@ export class LanguagePage implements OnInit {
     return await loading.present();
   }
   move(lang) {
-    console.log(lang);
     this.turkish.setLanguage(lang);
     this.router.navigateByUrl('tabs');
   }

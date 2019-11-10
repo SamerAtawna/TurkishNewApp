@@ -12,8 +12,9 @@ export class TurkishService {
   constructor(private http: HttpClient) {}
 
   setLanguage(lang) {
-    this.selectedLang = lang;
     this.lang.next(lang);
+    this.selectedLang = lang;
+ 
   }
 
   getMenu(): Observable<any> {

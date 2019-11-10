@@ -20,12 +20,16 @@ img{
 }
 ion-card{
   direction: rtl;
-  background:white;
+  background:#222428;
   width:45%;
   max-width: 315px;
-  min-width: 300px;
+  min-width: 210px;
+  color:white;
+  border: 1px solid grey;
 }
-
+ion-card-title{
+  color:white;
+}
 ion-content{
 
 }
