@@ -1,12 +1,30 @@
 <ion-header>
   <ion-toolbar color="dark" text-center>
     <ion-title>
-      <img src="assets/5.png">
+      <img src="assets/5.png" />
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ss">
-
-
+  <div class="catContainer" *ngIf="categories">
+    <div class="cat">
+      <ion-card *ngFor="let item of categories">
+        <ion-card-header>
+          <ion-img src="../../assets/{{ item.ImagePath }}"></ion-img>
+          <ion-card-title text-right padding>{{ item.Name }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content> </ion-card-content>
+      </ion-card>
+    </div>
+    <div class="cat" *ngIf="currLang == 'ar'">
+        <ion-card *ngFor="let item of categories">
+          <ion-card-header>
+            <ion-img src="../../assets/{{ item.ImagePath }}"></ion-img>
+            <ion-card-title text-right padding>{{ item.NameAr }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content> </ion-card-content>
+        </ion-card>
+      </div>
+  </div>
 </ion-content>
