@@ -30,7 +30,6 @@ export class Tab1Page implements OnInit {
 
   async presentLoading(msg) {
     const loading = await this.loading.create({
-      duration: 5000,
       message: msg,
       translucent: true,
       cssClass: "custom-class custom-loading"
@@ -45,7 +44,7 @@ export class Tab1Page implements OnInit {
     console.log("1 - getting lang");
     return new Promise((res, rej) => {
       this.currLang = this.turkish.selectedLang;
-      res(this.currLang);
+      res();
     });
   }
 
@@ -63,6 +62,7 @@ export class Tab1Page implements OnInit {
       })
       .then(() => {
         console.log("3 - dismissing");
+        this.turkish.setLanguage(this.currLang);
         this.loading.dismiss();
       });
   }
