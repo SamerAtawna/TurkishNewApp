@@ -26,6 +26,9 @@ ion-card{
   min-width: 210px;
   color:white;
   border: 1px solid grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 ion-card-title{
   color:white;

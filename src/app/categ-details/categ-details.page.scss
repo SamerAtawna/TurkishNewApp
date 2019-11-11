@@ -1,3 +1,42 @@
-.logo img{
-    max-width: 300px;
+ion-title img{
+    max-width: 150px;
+}
+ion-card{
+    background:white;
+}
+.crd{
+    background: white;
+    width:     200px;;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+
+}
+.contentCard{
+    font-size: 20px;
+    color:black;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.hd{
+    padding: 0px;
+    border: 1px solid white;
+}
+.star{
+    display: flex;
+    justify-content: flex-end;
+}
+.star img{
+    width: 80px;
+}
+ion-item{
+
+    --padding-end:0px;
+}
+
+.prod{
+    font-size: 12px;
 }

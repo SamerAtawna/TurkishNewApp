@@ -26,4 +26,8 @@ export class TurkishService {
   getMenu(): Observable<any> {
     return this.http.get(`${this.apiLink}/turkishcateg?lang=${this.lang}`);
   }
+
+  getMenuDetails(cat):Observable<any>{
+    return this.http.get(`${this.apiLink}/menudetails?cat=${cat}`);
+  }
 }
