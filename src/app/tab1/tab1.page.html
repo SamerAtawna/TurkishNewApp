@@ -8,7 +8,7 @@
 
 <ion-content class="ss" *ngIf="currLang == 'he'">
   <div class="catContainer" *ngIf="categories">
-      <ion-card *ngFor="let item of categories">
+      <ion-card *ngFor="let item of categories"  (click)="showMenu(item.CatID)">
         <ion-card-header>
           <ion-img src="../../assets/{{ item.ImagePath }}"></ion-img>
           <ion-card-title text-right>{{ item.Name }}</ion-card-title>
@@ -20,7 +20,7 @@
 <ion-content class="ss" *ngIf="currLang == 'ar'">
   <div class="catContainer" *ngIf="categories">
 
-      <ion-card  *ngFor="let item of categories">
+      <ion-card  *ngFor="let item of categories" (click)="showMenu(item.CatID)">
         <ion-card-header>
           <ion-img src="../../assets/{{ item.ImagePath }}"></ion-img>
           <ion-card-title text-right>{{ item.NameAr }}</ion-card-title>

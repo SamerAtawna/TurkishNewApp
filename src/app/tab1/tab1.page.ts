@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { TurkishService } from "./../turkish.service";
 import { Component, OnInit, NgZone } from "@angular/core";
 import * as $ from "jquery";
@@ -15,7 +16,8 @@ export class Tab1Page implements OnInit {
   constructor(
     private loading: LoadingController,
     private turkish: TurkishService,
-    private zone: NgZone
+    private zone: NgZone,
+    private router: Router
   ) {}
 
   makeshow(item) {
@@ -65,5 +67,11 @@ export class Tab1Page implements OnInit {
         this.turkish.setLanguage(this.currLang);
         this.loading.dismiss();
       });
+  }
+
+  showMenu(catid){
+    console.log("selectedCatid: ", catid);
+    this.turkish.setCateg(catid);
+    this.router.navigateByUrl('categ-details');
   }
 }
