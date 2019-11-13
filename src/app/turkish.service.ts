@@ -6,7 +6,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class TurkishService {
-  apiLink = 'http://localhost:3000';
+  // apiLink = 'http://localhost:3000';
+  apiLink = 'https://super-market-abu-malk.herokuapp.com';
   selectedLang = '';
   selectedCat = 0;
   lang = new BehaviorSubject<any>(this.selectedLang);
@@ -24,10 +25,19 @@ export class TurkishService {
   }
 
   getMenu(): Observable<any> {
-    return this.http.get(`${this.apiLink}/turkishcateg?lang=${this.lang}`);
+    console.log('getting menu for lang ', this.selectedLang);
+    return this.http.get(`${this.apiLink}/turkishcateg?lang=${this.selectedLang}`);
   }
 
   getMenuDetails(cat):Observable<any>{
     return this.http.get(`${this.apiLink}/menudetails?cat=${cat}`);
+  }
+
+  getFeedBacks(){
+    return this.http.get(`${this.apiLink}/feedbacks`);
+  }
+
+  postFeedBack(feedback, name):Observable<any>{
+    return this.http.get(`${this.apiLink}/addfeedback?feedback=${feedback}&name=${name}`);
   }
 }

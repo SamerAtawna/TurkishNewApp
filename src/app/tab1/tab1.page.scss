@@ -3,9 +3,7 @@
   overflow: hidden;
 }
 
-img{
-  max-height: 45px;
-}
+
 .menu{
   display: none;
 }
@@ -19,11 +17,13 @@ img{
   background:none;
 }
 ion-card{
+  
   direction: rtl;
-  background:#222428;
-  width:45%;
+  --background:#222428;
+  // --ion-item-background:#222428;
+  width:40%;
   max-width: 315px;
-  min-width: 210px;
+  min-width: 160px;
   color:white;
   border: 1px solid grey;
   display: flex;
@@ -35,6 +35,9 @@ ion-card-title{
 }
 ion-content{
 
+}
+.sc-ion-card-md-h {
+  --background:#222428;
 }
 .ss{
   display: flex;
@@ -48,5 +51,10 @@ ion-content{
   justify-content: center;
 }
 .custom-class{
-  background:black;
+  --background:#222428;
+  color:red;
+  --spinner-color: red;
+}
+ion-title img {
+  max-height:45px;
 }

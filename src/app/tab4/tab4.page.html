@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="dark" text-center>
+    <ion-title>
+      <img src="assets/5.png" />
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+      <div class="feedbacks" dir="rtl">
+        <ion-card class="feedback_card" dir="rtl" *ngFor="let item of feedbacks">
+          <ion-card-header>
+            <ion-card-subtitle>{{item.Name}}</ion-card-subtitle>
+            <ion-card-title>{{item.FeedBack}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+           {{item.Date | date}}
+          </ion-card-content>
+        </ion-card>
+      </div>
+      <div class="post_feedback">
+        <div class="post_name">
+          <ion-input type="text" placeholder="שם" [(ngModel)]="name"></ion-input>
+        </div>
+        <div class="post_text"><ion-textarea [(ngModel)]="post"></ion-textarea></div>
+        <div class="post_button"><ion-button  (click)="postFeedBack()" color="danger" size="default">שליחה</ion-button></div>
+      </div>
+  </div>
+
+</ion-content>

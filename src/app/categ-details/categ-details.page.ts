@@ -24,10 +24,8 @@ export class CategDetailsPage implements OnInit {
           this.turkish.getMenuDetails(d).subscribe(m => {
             console.log(m);
             this.menu = m;
+            this.loading.dismiss();
           });
-        })
-        .then(() => {
-          this.loading.dismiss();
         });
     });
   }

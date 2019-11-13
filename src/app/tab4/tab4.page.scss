@@ -1,0 +1,32 @@
+.container{
+display: grid;
+border-top:1px solid red;
+grid-template-rows: 60vh 10vh;
+height:70vh;
+color:white;
+}
+.feedback_card{
+    max-width: 100%;
+    width:90% !important;
+    text-align: right;
+}
+.post_feedback{
+    border-top:1px solid red;
+    display: flex;
+    text-align: right;
+    flex-direction: column;
+    padding-top:4px;
+}
+ion-input , ion-textarea{
+    --background: red;
+    border-radius: 5px;
+}
+.feedbacks{
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+@media only screen and (max-width: 375px) {
+    ion-card {
+        min-width: 160px;
+    }
+  }
