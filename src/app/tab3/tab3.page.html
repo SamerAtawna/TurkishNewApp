@@ -9,7 +9,7 @@
 
 <ion-content>
 <div class="container">
-    <ion-button color="danger" expand="full"><ion-icon name="call"></ion-icon>חייג עכשיו להזמנה!</ion-button>
+    <ion-button color="danger" expand="full" (click)="orderNow()" *ngIf="callString"><ion-icon name="call"></ion-icon>{{callString}}</ion-button>
   <ion-card>
       <ion-card-header>
         <ion-card-subtitle>טלפון להזמנות</ion-card-subtitle>

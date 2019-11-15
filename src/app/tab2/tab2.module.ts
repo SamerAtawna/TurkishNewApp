@@ -5,8 +5,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab2Page } from './tab2.page';
 import { AgmCoreModule } from '@agm/core';
+import { LaunchNavigator } from '@ionic-native/launch-navigator/ngx';
+
+
 @NgModule({
   imports: [
+    
     IonicModule,
     CommonModule,
     FormsModule,
@@ -15,6 +19,7 @@ import { AgmCoreModule } from '@agm/core';
     }),
     RouterModule.forChild([{ path: '', component: Tab2Page }])
   ],
-  declarations: [Tab2Page]
+  declarations: [Tab2Page],
+  providers: [LaunchNavigator]
 })
 export class Tab2PageModule {}

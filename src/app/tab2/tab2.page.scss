@@ -1,3 +1,32 @@
+@-webkit-keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 
 agm-map {
     height: 300px;
@@ -7,4 +36,20 @@ agm-map {
   }
   img{
     max-height: 45px;
+  }
+
+  .navButton{
+    position: absolute;
+    background: #e41513;
+    z-index: 9999;
+    bottom: 80px;
+    left: 20px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 3px 4px silver;
+    animation: pulsate-bck 0.5s ease-in-out infinite both;
   }

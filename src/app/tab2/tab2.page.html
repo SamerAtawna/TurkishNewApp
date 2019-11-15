@@ -6,7 +6,10 @@
     </ion-toolbar>
   </ion-header>
 <ion-content>
-    <agm-map [latitude]="lat" [longitude]="lng" style="height:100%">
+    <div class="navButton" (click)="navigate()"><ion-icon name="navigate"  style="zoom:2.0;" ></ion-icon></div>
+    <agm-map [latitude]="lat" [longitude]="lng" [zoom]="15" [streetViewControl]="false" style="height:100%">
         <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+   
       </agm-map>
+   
 </ion-content>
