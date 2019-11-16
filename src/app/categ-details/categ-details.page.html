@@ -3,6 +3,9 @@
     <ion-title>
       <img src="assets/5.png" />
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button class='btn'></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -28,20 +31,23 @@
     </ion-card>
   </div>
   <div class="container" *ngIf="this.lng == 'ar'">
-    <ion-card *ngFor="let item of menu" class="crd" text-right>
-
-      <ion-card-header class="hd">
-        <img src="../../assets/{{item.Image}}">
-      </ion-card-header>
-      <ion-card-content padding class="contentCard">
-          <ion-item lines="none">
-            <ion-label class='prod'>
+      <ion-card *ngFor="let item of menu" class="crd" text-right>
+  
+        <ion-card-header class="hd">
+          <img src="../../assets/{{item.Image}}">
+        </ion-card-header>
+        <ion-card-content  class="contentCard" text-left>
+          <ion-item lines="none" text-wrap>
+            <ion-label text-wrap>
               {{item.ProdNameAr}}
             </ion-label>
-            <span slot="end">{{item.Price}}</span>
           </ion-item>
+          <span slot="start">{{item.Price}}</span>
+          <span  class='star'>
+              <img src="../../assets/star.jpg">
+          </span>
+       
         </ion-card-content>
-    </ion-card>
-  </div>
-
+      </ion-card>
+    </div>
 </ion-content>
