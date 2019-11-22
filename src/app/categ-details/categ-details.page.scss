@@ -6,7 +6,7 @@ ion-card{
 }
 .crd{
     background: white;
-    width:     200px;;
+    width:     160px;;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -52,6 +52,7 @@ ion-item{
     height: auto !important;
     font-size: 30px;
     border-radius: 10px;
+    width:80px;
     background:#222428 !important;
   
 }

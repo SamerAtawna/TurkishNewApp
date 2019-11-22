@@ -1,25 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/scroll-watcher@latest/dist/scroll-watcher.min.js"></script>
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+
     <style>
-    .container{
-        display: grid;
-        border:1px solid red;
-        grid-template-rows: 80% 20%;
-        height:95vh;
-    }
-    
+        .container {
+            display: grid;
+            border: 1px solid red;
+            grid-template-rows: 80% 20%;
+            height: 200vh;
+        }
+
+        .ff {
+            height: 400px;
+            width: 400px;
+            border: 2px solid black;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
-            <div class="first">1</div>
-            <div class="second">2</div>
+        <div class="first">
+            <div class="ff"></div>
+        </div>
+        <div class="second">2</div>
 
     </div>
 </body>
+<script>
+    var watcher = new ScrollWatcher();
+    watcher.on("scrolling", function (evt) {
+        console.log(evt);
+    });
+
+    var printNumTwo;
+    for (var i = 0; i < 3; i++) {
+        if (i === 2) {
+            printNumTwo = () => {
+                return i;
+            };
+        }
+    }
+    console.log(printNumTwo());
+</script>
+
 </html>
