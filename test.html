@@ -36,22 +36,19 @@
         <div class="second">2</div>
 
     </div>
+    <a href="test2.html">go</a>
 </body>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153139039-1"></script>
 <script>
-    var watcher = new ScrollWatcher();
-    watcher.on("scrolling", function (evt) {
-        console.log(evt);
-    });
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    var printNumTwo;
-    for (var i = 0; i < 3; i++) {
-        if (i === 2) {
-            printNumTwo = () => {
-                return i;
-            };
-        }
-    }
-    console.log(printNumTwo());
+  gtag('config', 'UA-153139039-1');
+  gtag('event', 'Lang Select');
+
 </script>
+
 
 </html>
